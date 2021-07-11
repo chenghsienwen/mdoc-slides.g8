@@ -1,3 +1,8 @@
+# some left align cover 
+<!-- .element: style="text-align: left"  -->
+
+
+
 # $package$
 
 To install $package$
@@ -13,19 +18,41 @@ List(x, x)
 
 
 # Markdown Demo
+- open with new tab: [scala-with-cats2](https://underscore.io/blog/posts/2020/05/27/scala-with-cats-2.html)<!-- .element: target="_blank" -->
 
 
+## code highlight
 
-## External 1.1
+```scala[1-3|4-11|12-14|15-19]
+trait Printable[A] {
+  def format(a: A): String
+}
+object PrintableInstance {
+  implicit val strPrint: Printable[String] = new Printable[String] {
+    def format(a: String): String = a
+  }
+  implicit val intPrint: Printable[Int] = new Printable[Int] {
+    def format(a: Int): String = a.toString
+  }
+}
+object Printable {
+  def format[A](a: A)(implicit p: Printable[A]): String = p.format(a)
+}
+object PrintableSyntax {
+  implicit class PrintableOps[A](a: A)(implicit p: Printable[A]) {
+    def show: String = p.format(a)
+  }
+}
+```
 
-Content 1.1
 
-Note: This will only appear in the speaker notes window.
+## make table 
 
-
-## External 1.2
-
-Content 1.2
+|                |ASCII                          |HTML                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 
 
