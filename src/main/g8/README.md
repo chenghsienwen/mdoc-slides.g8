@@ -25,7 +25,7 @@ jekyll not installed
 
 if run jekyll -v show following error
 ```
-wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs$ jekyll -v
+wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs\$ jekyll -v
 Ignoring byebug-11.1.3 because its extensions are not built. Try: gem pristine byebug --version 11.1.3
 Ignoring debase-0.2.4.1 because its extensions are not built. Try: gem pristine debase --version 0.2.4.1
 Ignoring executable-hooks-1.5.0 because its extensions are not built. Try: gem pristine executable-hooks --version 1.5.0
@@ -47,7 +47,7 @@ this means jekyll try to use ruby 2.6.0 but current ruby version not 2.6.0 and m
 
 so need to change ruby version:
 ```
-wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs$ rvm use ruby 2.6.0
+wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs\$ rvm use ruby 2.6.0
 Warning! PATH is not properly set up, /home/wen/.rvm/gems/ruby-2.5.1/bin is not at first place.
          Usually this is caused by shell initialization files. Search for PATH=... entries.
          You can also re-add RVM to your profile by running: rvm get stable --auto-dotfiles
@@ -58,9 +58,9 @@ Using /home/wen/.rvm/gems/ruby-2.6.0
 
 then check ruby version and jekyll is works as expected
 ```
-wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs$ ruby -v
+wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs\$ ruby -v
 ruby 2.6.0p0 (2018-12-25 revision 66547) [x86_64-linux]
-wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs$ jekyll -v
+wen@wen-Lenovo-ideapad-330-15IKB:~/vpon/mdoc-slides.g8/profile2023/docs\$ jekyll -v
 jekyll 4.1.1
 ```
 
